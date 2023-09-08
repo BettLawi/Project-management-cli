@@ -38,3 +38,6 @@ class Task(Base):
     project = relationship("Project", back_populates="tasks")
 
 Base.metadata.create_all(engine)
+
+
+
