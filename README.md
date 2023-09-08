@@ -1,65 +1,107 @@
 # Project Management CLI
 
-A Command-Line Interface (CLI) application for managing users, projects, and tasks. This CLI tool allows you to perform CRUD (Create, Read, Update, Delete) operations on users, projects, and tasks efficiently. It is built using Python, SQLAlchemy, and Click.
+A Command-Line Interface (CLI) application for managing users, projects, and tasks. This CLI tool allows you to perform CRUD (Create, Read, Update, Delete) operations on users, projects, and tasks efficiently.
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Commands](#commands)
+- [Technologies Used](#technologies-used)
+- [License](#license)
+- [Contributions](#contributions)
 
 ## Installation
+```
+# clone the repo
+$ git clone <repo link>
+```
+```
+# navigate to directory
+$ cd <directory name>
+```
+```
+# install dependencies and create virtual environment
+$ pipenv install & pipenv shell
+```
+```
+# run the application
+$ python main.py
+```
 
-1. Clone the repository to your local machine:
-   git clone git@github.com:BettLawi/project-management-cli.git
-2. Navigate to the project directory:
-    cd project-management-cli
-3. Create a virtual environment and install dependencies using Pipenv:    
-    pipenv install
-4. Activate the virtual environment:
-    pipenv shell
-5. Run the application
-    python main.py  
-
- ## Usage   
- 1. To list available commands:
-    python main.py --help
- 2. To get help for a specific command, for example, user-related commands:
-    python main.py user --help
+ ## Usage
+ ```
+ # list available commands
+ $ python main.py --help
+ ```   
+ ```
+ # to get help for specific command, for example user-related commands;
+ $ python main.py user --help
+ ```
 
 ## Commands
-# User Management
-1. Create User: Create a new user.
-    python main.py user create
-2. List Users: List all users.
-    python main.py user list
-3. Update User: Update user information.
-    python main.py user update
-4.  Delete User: Delete a user.
-    python main.py user delete      
+```User management```
+```
+# create new user
+$ python main.py user create
+```
+```
+# list users
+$ python main.py user list
+```
+```
+# update user
+$ python main.py user update
+```
+```
+# delete user
+$ python main.py user delete 
+```
+```Project management```   
+```
+# create new project
+$ python main.py project create
+```
+```
+# list projects
+$ python main.py project list
+```
+```
+# update project
+$ python main.py project update
+```
+```
+# delete project
+$ python main.py project delete 
+``` 
+```Task management```   
+```
+# create new task
+$ python main.py task create
+```
+```
+# list tasks
+$ python main.py task list
+```
+```
+# update task
+$ python main.py task update
+```
+```
+# delete task
+$ python main.py task delete 
+``` 
 
-# Project Management
-1. Create Project: Create a new project.
-    python main.py project create
-2. List projects: List all projects.
-    python main.py project list
-3. Update Project: Update project information.
-    python main.py project update
-4.  Delete Project: Delete a project.
-    python main.py project delete       
+# Technologies used
+- Python
+- SQL Alchemy
+- Click
 
-# Task Management
-1. Create Task: Create a new task.
-    python main.py task create
-2. List Tasks: List all users.
-    python main.py task list
-3. Update Task: Update task information.
-    python main.py task update
-4.  Delete Task: Delete a task.
-    python main.py task delete        
+# License
+[MIT](LICENSE)
 
 # Contributions
-Authored by LAWI BETT
+Authored by Lawi Bett
 
 
 
