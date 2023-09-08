@@ -20,8 +20,8 @@ def create(name, user_id):
 @project.command()
 def list():
     projects = session.query(Project).all()
-    for project in projects:
-        print(f'Project ID: {project.id}, Name: {project.name}, Owner: {project.user.name}')
+    project_data = [{"ID": project.id, "Name": project.name, "Owner": project.user.name} for project in projects]
+    print(project_data)
 
 @project.command()
 @click.argument('project_id', type=int)

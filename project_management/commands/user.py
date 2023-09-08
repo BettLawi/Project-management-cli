@@ -1,13 +1,13 @@
 # project_management/commands/user.py
 import click
 from project_management.database import User, session
-#nesting commands
+
 @click.group()
 def user():
     """User management commands"""
 
-@user.command()#makes function a command
-@click.option('--name', prompt='Enter your name', help='Name of the user')#deals with parameter
+@user.command()
+@click.option('--name', prompt='User Name', help='Name of the user')
 def create(name):
     user = User(name=name)
     session.add(user)
@@ -17,8 +17,8 @@ def create(name):
 @user.command()
 def list():
     users = session.query(User).all()
-    for user in users:
-        print(f'User ID: {user.id}, Name: {user.name}')
+    user_data = [{"ID": user.id, "Name": user.name} for user in users]
+    print(user_data)
 
 @user.command()
 @click.argument('user_id', type=int)

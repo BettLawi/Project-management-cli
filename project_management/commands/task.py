@@ -20,8 +20,8 @@ def create(name, project_id):
 @task.command()
 def list():
     tasks = session.query(Task).all()
-    for task in tasks:
-        print(f'Task ID: {task.id}, Name: {task.name}, Project: {task.project.name}')
+    task_data = [{"ID": task.id, "Name": task.name, "Project": task.project.name} for task in tasks]
+    print(task_data)
 
 @task.command()
 @click.argument('task_id', type=int)
